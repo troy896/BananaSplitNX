@@ -1,0 +1,26 @@
+[submodule "hekate"]
+	path = hekate
+	url = https://github.com/CTCaer/hekate.git
+	branch = dev
+[submodule "nx-hbloader"]
+	path = nx-hbloader
+	url = https://github.com/switchbrew/nx-hbloader.git
+[submodule "nx-hbmenu"]
+	path = nx-hbmenu
+	url = https://github.com/switchbrew/nx-hbmenu.git
+[submodule "Atmosphere"]
+	path = Atmosphere
+	url = https://github.com/Atmosphere-NX/Atmosphere.git
+[submodule "sys-ftpd"]
+	path = sys-ftpd
+	url = https://github.com/jakibaki/sys-ftpd.git
+[submodule "Checkpoint"]
+	path = Checkpoint
+	url = https://github.com/BernardoGiordano/Checkpoint.git
+[submodule "Tinfoil"]
+	path = Tinfoil
+	url = https://github.com/Adubbz/Tinfoil.git
+[submodule "NX-Shell"]
+	path = NX-Shell
+	url = https://github.com/joel16/NX-Shell.git
+	branch = gh-pages
