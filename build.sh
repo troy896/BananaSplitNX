@@ -3,7 +3,8 @@
 #Build script for PatNX
 #Simple build script to compile, clean and copy over to sd files.
 
-mkdir build && cd build
+mkdir build 
+cd build
 mkdir atmosphere
 mkdir atmosphere/titles
 mkdir atmosphere/titles/0100000000000036
@@ -13,12 +14,21 @@ mkdir atmosphere/titles/010000000000100D/exefs
 mkdir atmosphere/exefs_patches
 mkdir PatNX
 mkdir switch
+mkdir switch/tinfoil
+mkdir switch/NX-Shell
+mkdir switch/Checkpoint
+mkdir tinfoil
+mkdir tinfoil/nsp
 mkdir ftpd
+cp /mnt/d/Github/PatNX/hekate_ipl.ini /mnt/d/Github/PatNX/build/hekate_ipl.ini
+cp /mnt/d/Github/PatNX/bootlogo.bmp /mnt/d/Github/PatNX/build/bootlogo.bmp
+cp /mnt/d/Github/PatNX/NX-Shell/NX-Shell.nro /mnt/d/Github/PatNX/build/switch/NX-Shell/NX-Shell.nro
 cd /mnt/d/Github/PatNX/hekate
 make
-cp /mnt/d/Github/PatNX/hekate/output/hekate.bin /mnt/d/Github/PatNX/PatNX.bin
+cp /mnt/d/Github/PatNX/hekate/output/hekate.bin /mnt/d/Github/PatNX/build/PatNX.bin
 make clean
 cp /mnt/d/Github/PatNX/atmosphere.patch /mnt/d/Github/PatNX/Atmosphere/atmosphere.patch
+cd /mnt/d/Github/PatNX/Atmosphere
 patch -p1 --binary < atmosphere.patch
 rm atmosphere.patch
 make
@@ -28,6 +38,7 @@ cp /mnt/d/Github/PatNX/Atmosphere/stratosphere/loader/loader.kip /mnt/d/Github/P
 cp /mnt/d/Github/PatNX/Atmosphere/stratosphere/fs_mitm/fs_mitm.kip /mnt/d/Github/PatNX/build/PatNX/fs_mitm.kip
 cp /mnt/d/Github/PatNX/Atmosphere/stratosphere/pm/pm.kip /mnt/d/Github/PatNX/build/PatNX/pm.kip
 cp /mnt/d/Github/PatNX/Atmosphere/stratosphere/sm/sm.kip /mnt/d/Github/PatNX/build/PatNX/sm.kip
+cp -r "/mnt/d/Github/PatNX/Fake Tickets" /mnt/d/Github/PatNX/build/atmosphere/exefs_patches
 make clean
 cd /mnt/d/Github/PatNX/sys-ftpd
 make
@@ -48,17 +59,13 @@ cd /mnt/d/Github/PatNX/Tinfoil
 make
 cp /mnt/d/Github/PatNX/Tinfoil/Tinfoil.nro /mnt/d/Github/PatNX/build/switch/tinfoil/tinfoil.nro
 make clean
-cp -r "/mnt/d/Github/PatNX/Fake Tickets" /mnt/d/Github/PatNX/build/atmosphere/exefs_patches
 cd /mnt/d/Github/PatNX/Checkpoint
 make
-cp /mnt/d/Github/PatNX/NX-Shell/NX-Shell.nro /mnt/d/Github/PatNX/build/switch/NX-Shell/NX-Shell.nro
 cp /mnt/d/Github/PatNX/Checkpoint/switch/out/Checkpoint.nro /mnt/d/Github/PatNX/build/switch/Checkpoint/Checkpoint.nro
 make clean
-cp /mnt/d/Github/PatNX/hekate_ipl.ini /mnt/d/Github/PatNX/build/hekate_ipl.ini
-cp /mnt/d/Github/PatNX/bootlogo.bmp /mnt/d/Github/PatNX/build/bootlogo.bmp
 cd /mnt/d/Github/PatNX/build
 export DATE=$(date +%s | cut -c 1-8)
 zip -r9 PatNX-$DATE.zip .
-cp /mnt/d/Github/PatNX/build/PikaNX-$DATE.zip /mnt/d/Github/PatNX
+cp /mnt/d/Github/PatNX/build/PatNX-$DATE.zip /mnt/d/Github/PatNX/out/PatNX-$DATE.zip
 cd /mnt/d/Github/PatNX
 rm -r build
