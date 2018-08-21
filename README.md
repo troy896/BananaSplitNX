@@ -1,2 +1,2 @@
-# PatNX
-My Custom Switch OS Sd Package
+# BananaSplitNX
+Daily Compiled SD Card Zip's of Atmosphere and ReiNX
