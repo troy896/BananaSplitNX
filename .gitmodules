@@ -24,3 +24,6 @@
 	path = NX-Shell
 	url = https://github.com/joel16/NX-Shell.git
 	branch = gh-pages
+[submodule "ReiNX"]
+	path = ReiNX
+	url = https://github.com/Reisyukaku/ReiNX.git
