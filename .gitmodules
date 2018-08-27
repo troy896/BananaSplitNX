@@ -27,3 +27,6 @@
 [submodule "ReiNX"]
 	path = ReiNX
 	url = https://github.com/Reisyukaku/ReiNX.git
+[submodule "JKSV"]
+	path = JKSV
+	url = https://github.com/J-D-K/JKSV.git
