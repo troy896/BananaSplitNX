@@ -1,7 +1,3 @@
-[submodule "hekate"]
-	path = hekate
-	url = https://github.com/CTCaer/hekate.git
-	branch = dev
 [submodule "nx-hbloader"]
 	path = nx-hbloader
 	url = https://github.com/switchbrew/nx-hbloader.git
@@ -30,3 +26,6 @@
 [submodule "JKSV"]
 	path = JKSV
 	url = https://github.com/J-D-K/JKSV.git
+[submodule "Hekate"]
+	path = Hekate
+	url = https://github.com/CTCaer/hekate.git
