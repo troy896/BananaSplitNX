@@ -5,6 +5,7 @@
 
 mkdir build 
 cd build
+mkdir bootloader
 mkdir atmosphere
 mkdir atmosphere/titles
 mkdir atmosphere/titles/0100000000000036
@@ -12,14 +13,17 @@ mkdir atmosphere/titles/0100000000000036/exefs
 mkdir atmosphere/titles/010000000000100D
 mkdir atmosphere/titles/010000000000100D/exefs
 mkdir atmosphere/exefs_patches
-mkdir BananaSplitNX
+mkdir modules
 mkdir switch
 mkdir switch/tinfoil
 mkdir switch/NX-Shell
 mkdir switch/Checkpoint
+mkdir switch/JKSV
 mkdir tinfoil
 mkdir tinfoil/nsp
 mkdir ftpd
+
+
 cp /mnt/d/Github/BananaSplitNX/hekate_ipl.ini /mnt/d/Github/BananaSplitNX/build/hekate_ipl.ini
 cp /mnt/d/Github/BananaSplitNX/bootlogo.bmp /mnt/d/Github/BananaSplitNX/build/bootlogo.bmp
 cp /mnt/d/Github/BananaSplitNX/NX-Shell/NX-Shell.nro /mnt/d/Github/BananaSplitNX/build/switch/NX-Shell/NX-Shell.nro
@@ -42,7 +46,8 @@ cp -r "/mnt/d/Github/BananaSplitNX/Fake Tickets" /mnt/d/Github/BananaSplitNX/bui
 make clean
 cd /mnt/d/Github/BananaSplitNX/sys-ftpd
 make
-cp /mnt/d/Github/BananaSplitNX/sys-ftpd/sys-ftpd.kip /mnt/d/Github/BananaSplitNX/build/BananaSplitNX/sys_ftpd.kip
+cp /mnt/d/Github/BananaSplitNX/sys-ftpd/sys-ftpd.kip /mnt/d/Github/BananaSplitNX/build/modules/sys_ftpd.kip
+cp /mnt/d/Github/BananaSplitNX/sys-ftpd/sys-ftpd.kip /mnt/d/Github/BananaSplitNX/build/ReiNX/sysmodules/sys_ftpd.kip
 cp /mnt/d/Github/BananaSplitNX/sys-ftpd/sd_card/ftpd/* /mnt/d/Github/BananaSplitNX/build/ftpd/
 make clean
 cd /mnt/d/Github/BananaSplitNX/nx-hbmenu
