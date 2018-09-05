@@ -20,7 +20,3 @@
 [submodule "JKSV"]
 	path = JKSV
 	url = https://github.com/J-D-K/JKSV.git
-[submodule "hekate"]
-	path = hekate
-	url = https://github.com/balika011/hekate.git
-	branch = master
